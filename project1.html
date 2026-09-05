@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"rel="stylesheet">
+    <title>Project 1</title>
+
+    <style>
+    body
+    {
+        background-color: bisque;
+
+    }
+ 
+    h1{
+    color: brown;
+ }
+
+   .card-label{
+    font-size: 11px;
+    color: rgb(206, 128, 26);
+    text-transform: uppercase;
+}
+
+   pre{
+  font-size: 13px;
+  color: rgb(206, 128, 26);
+}
+</style>
+
+</head>
+<body class="py-4">
+<div class="container">
+
+<h1 class="mb-1">
+ My Phone Contact
+</h1>
+
+<P class="mb-4">Introduction To Objects In Javascript</P>
+<div class="card mb-3 shadow-sm" style="max-width: 400px;">
+ 
+<div class="card-body">
+<h5 class="card-title" style="color: cornflowerblue;"  >
+   Contact Details 
+</h5>
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">
+
+<span class="card-label d-block">
+Name
+</span>
+<strong id="name">-</strong>
+
+</li>
+
+<li class="list-group-item">
+<span class="card-label d-block">
+Phone
+</span>
+<strong id="phone">-</strong>
+
+</li>
+
+<li class="list-group-item">
+<span class="card-label d-block">
+School
+</span>
+<strong id="School">-</strong>
+
+</li>
+
+<li class="list-group-item">
+<span class="card-label d-block">
+City
+</span>
+<strong id="city">-</strong>
+
+</li>
+</ul>
+</div>
+</div>
+
+<div class="card shadow-sm">
+<div class="card-body">
+    <h6>Javascript Object Used</h6>
+    <pre id="codedisplay" class="bg-light p-3"></pre>
+</div>
+</div>
+
+</div>
+    <script>
+    var mycontact = {
+        name: "Haris Kidwai",
+        phone: "03263692227",
+        school: "Usman Public School System",
+        city: "Karachi, Pakistan"
+    }
+
+    var NameEl = document.getElementById( "name" );
+    var PhoneEl = document.getElementById( "phone" );
+
+    NameEl.textContent = mycontact.name;
+    PhoneEl.textContent = mycontact.phone;
+
+    var SchoolEl = document.getElementById( "School" );
+    var CityEl = document.getElementById( "city" );
+
+    SchoolEl.textContent = mycontact ["school"];
+    CityEl.textContent = mycontact ["city"];
+
+    var codeEl = document.getElementById("codedisplay");
+
+
+    codeEl.textContent =
+
+    'var myContact = {\n' +
+
+    ' name: "' + mycontact.name + '",\n' +
+
+    ' phone: "' + mycontact.phone + '",\n' +
+
+    ' school: "' + mycontact["school"] + '",\n' +
+
+    ' city: "' + mycontact["city"] + '"\n' +
+
+    '};'
+
+        </script>
+</body>
+</html>
